@@ -12,10 +12,10 @@
 
 @interface HttpTool : NSObject
 
-+(void)getWithURLString:(NSString *)urlString parameters:(NSDictionary *)paremeters success:(NetWorkSuccessBlock)success failure:(NetWorkFailureBlock)failure;
++(void)GETWithURLString:(NSString *)urlString parameters:(NSDictionary *)paremeters success:(NetWorkSuccessBlock)success failure:(NetWorkFailureBlock)failure;
 
-+(void)postWithURLString:(NSString *)urlString parameters:(NSDictionary *)paremeters success:(NetWorkSuccessBlock)success failure:(NetWorkFailureBlock)failure;
++(void)POSTWithURLString:(NSString *)urlString parameters:(NSDictionary *)paremeters success:(NetWorkSuccessBlock)success failure:(NetWorkFailureBlock)failure;
 
-+(void)normalRequestWithURLString:(NSString*)urlString parameters:(NSDictionary *)parameters success:(NetWorkSuccessBlock)success failure:(NetWorkFailureBlock)failure;
-
++(void)Request:(NSURLRequest *)request success:(NetWorkSuccessBlock)success failure:(NetWorkFailureBlock)failure;
++(void)Request:(NSURLRequest *)request completionHandler:(void (^)(NSURLResponse *, NSData *, NSError * ))handler;
 @end

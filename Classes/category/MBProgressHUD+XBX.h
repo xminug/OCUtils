@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 minug. All rights reserved.
 //
 
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 
 @interface MBProgressHUD (XBX)
 

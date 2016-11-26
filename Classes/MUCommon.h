@@ -9,7 +9,7 @@
 #ifndef MUCommon_h
 #define MUCommon_h
 
-#import <Masonry/Masonry.h>
+#import "Masonry.h"
 
 #define APP_DELEGATE            ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 #define App_Frame_Width         ([[UIScreen mainScreen] applicationFrame].size.width)
@@ -40,7 +40,7 @@
 #define IS_IPHONE_6 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )667 ) < DBL_EPSILON )
 #define IS_IPHONE_6_PLUS ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )960 ) < DBL_EPSILON )
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define scaleFactor (App_Frame_Width/320)
+#define scaleFactor1 (App_Frame_Width/320)
 
 #define deviceScale (([[UIScreen mainScreen] applicationFrame].size.height)<=667.0?1.0:1.5)
 #define XColor(r,g,b ,a) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:(a/1.0)]
