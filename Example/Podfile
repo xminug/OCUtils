@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MinugUtils_Example' do
+  pod 'MinugUtils', :path => '../'
+
+  target 'MinugUtils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
