@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MinugUtils'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of MinugUtils.'
+  s.version          = '1.0.99'
+  s.summary          = "Minug's utils on iOS"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,27 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+minug's utils on iOS
                        DESC
 
   s.homepage         = 'https://github.com/xminug/MinugUtils'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'xminug' => '1124571232@qq.com' }
-  s.source           = { :git => 'https://github.com/xminug/MinugUtils.git', :tag => s.version.to_s }
+  s.author           = { 'xminug' => 'xminug@gmail.com' }
+  s.source           = { :git => 'https://github.com/xminug/OCUtils.git', :branch => 'master' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MinugUtils/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'MinugUtils' => ['MinugUtils/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'MinugUtils' => ['MinugUtils/Assets/*.png']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  s.dependency 'AFNetworking'
+  s.dependency 'Masonry'
+  s.dependency 'MBProgressHUD'
 end
