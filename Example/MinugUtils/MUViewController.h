@@ -7,7 +7,9 @@
 //
 
 @import UIKit;
+@import Foundation;
+#import "MinugUtils.h"
 
-@interface MUViewController : UIViewController
+@interface MUViewController : XViewController
 
 @end
