@@ -22,7 +22,7 @@ pod 'MinugUtils'
 
 ## Author
 
-xminug, 1124571232@qq.com
+xminug, xminug@gmail.com
 
 ## License
 
