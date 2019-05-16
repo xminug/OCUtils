@@ -20,6 +20,19 @@ it, simply add the following line to your Podfile:
 pod 'MinugUtils'
 ```
 
+## Update
+
+MinugUtils的Pod文件里面设置了根据branch拉取对应的代码，而不是根据Tag。方便以后有改动不需要重新打tag进行发布。
+
+所以如果需要更新代码，先清除本地缓存，然后更新文件后，再次pod install，即是最新的代码了。
+
+
+```
+    pod cache clean MinugUtils
+   #pod repo update master
+    pod install
+```
+
 ## Author
 
 xminug, xminug@gmail.com
