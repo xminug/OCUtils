@@ -13,12 +13,12 @@
 +(void)showWithView:(UIView *)view Text:(NSString *)text hideDelayTime:(NSTimeInterval)time{
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     [view addSubview:hud];
-    hud.labelText = text;
+    hud.label.text = text;
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.animationType = MBProgressHUDAnimationFade;
-    [hud show:YES];
+    [hud showAnimated:YES];
     hud.removeFromSuperViewOnHide = YES;
-    [hud hide:YES afterDelay:time];
+    [hud hideAnimated:YES afterDelay:time];
 }
 
 +(void)showSuccessWithView:(UIView *)view Text:(NSString *)text hideDelayTime:(NSTimeInterval)time{
@@ -35,21 +35,21 @@
 
 +(void)makeHudCustomViewMode:(MBProgressHUD *)hud view:(UIView *)view Text:(NSString *)text hideDelayTime:(NSTimeInterval)time{
     [view addSubview:hud];
-    hud.labelText = text;
+    hud.label.text = text;
     hud.mode = MBProgressHUDModeCustomView;
     hud.animationType = MBProgressHUDAnimationFade;
-    [hud show:YES];
+    [hud showAnimated:YES];
     hud.removeFromSuperViewOnHide = YES;
-    [hud hide:YES afterDelay:time];
+    [hud hideAnimated:YES afterDelay:time];
 }
 
 +(MBProgressHUD *)showWithView:(UIView *)view Text:(NSString *)text{
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     [view addSubview:hud];
-    hud.labelText = text;
+    hud.label.text = text;
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.animationType = MBProgressHUDAnimationFade;
-    [hud show:YES];
+    [hud showAnimated:YES];
     hud.removeFromSuperViewOnHide = YES;
     return hud;
 }
